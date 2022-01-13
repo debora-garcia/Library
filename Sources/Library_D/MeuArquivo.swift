@@ -2,7 +2,7 @@ public class BigBrotherBrasil {
     var initials: String
     var edition: Int
     
-    init(initials: String, edition: Int) {
+    public init(initials: String, edition: Int) {
         self.initials = "BBB"
         self.edition = 22
     }

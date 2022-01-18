@@ -8,10 +8,18 @@
 import UIKit
 
 public class ViewController: UIViewController {
+    
+    @IBOutlet weak var getPassword: UITextField!
+    @IBOutlet weak var getEmail: UITextField!
     @IBOutlet weak var meuBotao: UIButton!
+    
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
         meuBotao.setTitle("Fazer login", for: .normal)
+        
+        print("Email: \(getEmail), senha: \(getPassword)")
+         
     }
 }

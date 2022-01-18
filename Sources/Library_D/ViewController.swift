@@ -13,6 +13,10 @@ public class ViewController: UIViewController {
     @IBOutlet weak var getEmail: UITextField!
     @IBOutlet weak var meuBotao: UIButton!
     
+    public class LoginViewController: UIViewController {
+        super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
+    }
+    
     
     public override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,11 +13,13 @@ public class ViewController: UIViewController {
     @IBOutlet weak var getEmail: UITextField!
     @IBOutlet weak var meuBotao: UIButton!
     
-    public class LoginViewController: UIViewController {
-        super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
+    public init() {
+    super.init(nibName: "ViewController", bundle: Bundle(for: ViewController.self))
     }
-    
-    
+    required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+    }
+        
     public override func viewDidLoad() {
         super.viewDidLoad()
         

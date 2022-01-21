@@ -43,6 +43,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cadeado.png" translatesAutoresizingMaskIntoConstraints="NO" id="KLD-zj-5kD">
                     <rect key="frame" x="126" y="57" width="163" height="132"/>
                     <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="132" id="YVj-dZ-9bH"/>
                         <constraint firstAttribute="height" constant="132" id="vg1-ic-PMp"/>
                     </constraints>
                 </imageView>
@@ -65,9 +66,13 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="KLD-zj-5kD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="126" id="0Ci-UC-47y"/>
+                <constraint firstItem="LE2-0g-gDe" firstAttribute="top" secondItem="KLD-zj-5kD" secondAttribute="bottom" constant="134" id="0EC-53-6Sf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Az4-EY-jGO" secondAttribute="trailing" constant="43" id="0GX-KL-lAo"/>
                 <constraint firstItem="hrW-4b-SEM" firstAttribute="top" secondItem="p7M-af-dJI" secondAttribute="bottom" constant="42" id="0Uv-6z-48A"/>
                 <constraint firstItem="p7M-af-dJI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="2g8-4i-gay"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KLD-zj-5kD" secondAttribute="trailing" constant="125" id="35w-Qm-dfD"/>
+                <constraint firstItem="KLD-zj-5kD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="57" id="8qm-mw-hWK"/>
                 <constraint firstItem="qjr-q3-MG0" firstAttribute="top" secondItem="Az4-EY-jGO" secondAttribute="bottom" constant="81" id="9aD-RX-qQx"/>
                 <constraint firstItem="KLD-zj-5kD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="57" id="BmH-oX-fh1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LE2-0g-gDe" secondAttribute="trailing" constant="43" id="ChS-hq-c5F"/>

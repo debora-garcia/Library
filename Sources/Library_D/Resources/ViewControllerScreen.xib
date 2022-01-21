@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,7 +19,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrW-4b-SEM">
@@ -33,15 +34,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LE2-0g-gDe">
-                    <rect key="frame" x="158" y="323" width="227" height="34"/>
-                    <color key="tintColor" systemColor="tintColor"/>
-                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjr-q3-MG0">
-                    <rect key="frame" x="109" y="501" width="210" height="29"/>
+                    <rect key="frame" x="109" y="545" width="157" height="29"/>
                     <color key="backgroundColor" red="0.54515409469999998" green="0.69672089820000005" blue="0.97650295499999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,37 +44,49 @@
                         <color key="titleShadowColor" red="0.48588639500000003" green="0.61881071330000004" blue="0.87061733009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Az4-EY-jGO">
-                    <rect key="frame" x="158" y="386" width="227" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Az4-EY-jGO">
+                    <rect key="frame" x="157" y="423" width="227" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cadeado.png" translatesAutoresizingMaskIntoConstraints="NO" id="KLD-zj-5kD">
-                    <rect key="frame" x="126" y="139" width="177" height="132"/>
+                    <rect key="frame" x="126" y="139" width="124" height="132"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="163" id="r8G-ll-wCo"/>
-                        <constraint firstAttribute="height" constant="132" id="tgw-iT-gRc"/>
+                        <constraint firstAttribute="height" constant="132" id="EWh-C2-lYc"/>
                     </constraints>
                 </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LE2-0g-gDe">
+                    <rect key="frame" x="157" y="367" width="174" height="34"/>
+                    <color key="tintColor" systemColor="tintColor"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Az4-EY-jGO" secondAttribute="trailing" constant="43" id="0GX-KL-lAo"/>
                 <constraint firstItem="hrW-4b-SEM" firstAttribute="top" secondItem="p7M-af-dJI" secondAttribute="bottom" constant="42" id="0Uv-6z-48A"/>
-                <constraint firstItem="KLD-zj-5kD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="139" id="2bl-2F-u2p"/>
                 <constraint firstItem="p7M-af-dJI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="2g8-4i-gay"/>
+                <constraint firstItem="LE2-0g-gDe" firstAttribute="top" secondItem="KLD-zj-5kD" secondAttribute="bottom" constant="96" id="8UE-SG-e9I"/>
                 <constraint firstItem="qjr-q3-MG0" firstAttribute="top" secondItem="Az4-EY-jGO" secondAttribute="bottom" constant="81" id="9aD-RX-qQx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LE2-0g-gDe" secondAttribute="trailing" constant="43" id="ChS-hq-c5F"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KLD-zj-5kD" secondAttribute="trailing" constant="125" id="Kbv-Ck-E8q"/>
                 <constraint firstItem="hrW-4b-SEM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="LpK-12-26n"/>
-                <constraint firstItem="KLD-zj-5kD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="126" id="OQh-N7-aBC"/>
+                <constraint firstItem="KLD-zj-5kD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="95" id="N46-nH-hrv"/>
                 <constraint firstItem="LE2-0g-gDe" firstAttribute="leading" secondItem="p7M-af-dJI" secondAttribute="trailing" constant="34.329999999999998" id="OjM-O1-QFC"/>
+                <constraint firstItem="KLD-zj-5kD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="126" id="QCT-ny-ViB"/>
+                <constraint firstItem="LE2-0g-gDe" firstAttribute="leading" secondItem="p7M-af-dJI" secondAttribute="trailing" constant="33.329999999999998" id="Riw-Ht-rtH"/>
                 <constraint firstItem="p7M-af-dJI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="330" id="SC0-SC-zjf"/>
+                <constraint firstItem="LE2-0g-gDe" firstAttribute="leading" secondItem="p7M-af-dJI" secondAttribute="trailing" constant="33.329999999999998" id="TKS-S4-OzE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qjr-q3-MG0" secondAttribute="trailing" constant="109" id="aEW-h0-WZR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LE2-0g-gDe" secondAttribute="trailing" constant="44" id="c0x-SR-bXZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KLD-zj-5kD" secondAttribute="trailing" constant="125" id="cOB-9O-nBs"/>
                 <constraint firstItem="Az4-EY-jGO" firstAttribute="leading" secondItem="hrW-4b-SEM" secondAttribute="trailing" constant="35" id="e3S-TC-WrH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LE2-0g-gDe" secondAttribute="trailing" constant="44" id="fL5-rd-NEF"/>
+                <constraint firstItem="LE2-0g-gDe" firstAttribute="top" secondItem="KLD-zj-5kD" secondAttribute="bottom" constant="52" id="j67-ee-XqI"/>
+                <constraint firstItem="LE2-0g-gDe" firstAttribute="top" secondItem="KLD-zj-5kD" secondAttribute="bottom" constant="96" id="jJm-2x-NN9"/>
                 <constraint firstItem="qjr-q3-MG0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="109" id="lWV-VY-u08"/>
-                <constraint firstItem="LE2-0g-gDe" firstAttribute="top" secondItem="KLD-zj-5kD" secondAttribute="bottom" constant="52" id="nLD-FQ-O0X"/>
                 <constraint firstItem="Az4-EY-jGO" firstAttribute="top" secondItem="LE2-0g-gDe" secondAttribute="bottom" constant="29" id="vZC-ez-Mxz"/>
             </constraints>
             <point key="canvasLocation" x="294.39252336448595" y="82.937365010799141"/>

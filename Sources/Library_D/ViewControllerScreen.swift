@@ -23,8 +23,7 @@ public class ViewControllerScreen: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-//        meuBotao.tintColor = .black
-        print("Testando a view controller")
+        print("Testando a view controller Screen")
         
 //        meuBotao.setTitle("Fazer login", for: .normal)
     }

@@ -56,12 +56,19 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cadeado.png" translatesAutoresizingMaskIntoConstraints="NO" id="l7N-FF-r9U">
-                    <rect key="frame" x="67" y="134" width="240" height="128"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3t-7F-hWG">
+                    <rect key="frame" x="67" y="123" width="240" height="128"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cadeado" translatesAutoresizingMaskIntoConstraints="NO" id="eBY-SN-QKF">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="eaq-hg-TW6"/>
+                        <constraint firstAttribute="height" constant="128" id="nWw-GL-1Ou"/>
                     </constraints>
-                </imageView>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,11 +76,12 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Az4-EY-jGO" secondAttribute="trailing" constant="43" id="0GX-KL-lAo"/>
                 <constraint firstItem="hrW-4b-SEM" firstAttribute="top" secondItem="p7M-af-dJI" secondAttribute="bottom" constant="42" id="0Uv-6z-48A"/>
                 <constraint firstItem="p7M-af-dJI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="2g8-4i-gay"/>
+                <constraint firstItem="a3t-7F-hWG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="67" id="7Wb-Di-bEa"/>
+                <constraint firstItem="a3t-7F-hWG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="79" id="7Ya-5M-92p"/>
                 <constraint firstItem="qjr-q3-MG0" firstAttribute="top" secondItem="Az4-EY-jGO" secondAttribute="bottom" constant="81" id="9aD-RX-qQx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LE2-0g-gDe" secondAttribute="trailing" constant="43" id="ChS-hq-c5F"/>
-                <constraint firstItem="l7N-FF-r9U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="67" id="EyC-Wi-0c7"/>
-                <constraint firstItem="l7N-FF-r9U" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="90" id="Hml-6o-uR3"/>
                 <constraint firstItem="hrW-4b-SEM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="LpK-12-26n"/>
+                <constraint firstItem="LE2-0g-gDe" firstAttribute="top" secondItem="a3t-7F-hWG" secondAttribute="bottom" constant="116" id="OeC-C6-MuW"/>
                 <constraint firstItem="LE2-0g-gDe" firstAttribute="leading" secondItem="p7M-af-dJI" secondAttribute="trailing" constant="34.329999999999998" id="OjM-O1-QFC"/>
                 <constraint firstItem="LE2-0g-gDe" firstAttribute="leading" secondItem="p7M-af-dJI" secondAttribute="trailing" constant="33.329999999999998" id="Riw-Ht-rtH"/>
                 <constraint firstItem="p7M-af-dJI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="330" id="SC0-SC-zjf"/>
@@ -82,16 +90,15 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LE2-0g-gDe" secondAttribute="trailing" constant="44" id="c0x-SR-bXZ"/>
                 <constraint firstItem="Az4-EY-jGO" firstAttribute="leading" secondItem="hrW-4b-SEM" secondAttribute="trailing" constant="35" id="e3S-TC-WrH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LE2-0g-gDe" secondAttribute="trailing" constant="44" id="fL5-rd-NEF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="l7N-FF-r9U" secondAttribute="trailing" constant="68" id="j63-tj-95q"/>
                 <constraint firstItem="qjr-q3-MG0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="109" id="lWV-VY-u08"/>
-                <constraint firstItem="LE2-0g-gDe" firstAttribute="top" secondItem="l7N-FF-r9U" secondAttribute="bottom" constant="105" id="uJa-9v-aYT"/>
                 <constraint firstItem="Az4-EY-jGO" firstAttribute="top" secondItem="LE2-0g-gDe" secondAttribute="bottom" constant="29" id="vZC-ez-Mxz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a3t-7F-hWG" secondAttribute="trailing" constant="68" id="ya6-oL-CrT"/>
             </constraints>
             <point key="canvasLocation" x="293.60000000000002" y="82.758620689655174"/>
         </view>
     </objects>
     <resources>
-        <image name="cadeado.png" width="640" height="640"/>
+        <image name="cadeado" width="640" height="640"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

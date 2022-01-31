@@ -43,6 +43,9 @@
                     <state key="normal" title="Entrar">
                         <color key="titleShadowColor" red="0.48588639500000003" green="0.61881071330000004" blue="0.87061733009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
+                    <connections>
+                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="kee-b8-YBD"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Az4-EY-jGO">
                     <rect key="frame" x="157" y="423" width="174" height="34"/>

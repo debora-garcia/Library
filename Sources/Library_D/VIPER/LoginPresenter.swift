@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol LoginModuleInterface: AnyObject {
+protocol LoginModuleInterface {
   func updateView()
 }
 
@@ -17,9 +17,11 @@ protocol LoginModuleInterface: AnyObject {
 
 class LoginPresenter: LoginModuleInterface {
 
-  weak var view: LoginViewInterface!
+//  weak var view: LoginViewInterface!
+    var interactor: LoginInteractorInput!
 
   func updateView() {
+      self.interactor.login()
     print("chamou a presenter")
   }
 }

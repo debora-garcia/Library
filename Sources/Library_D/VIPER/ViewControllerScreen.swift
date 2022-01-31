@@ -17,12 +17,13 @@ public class ViewControllerScreen: UIViewController, LoginViewInterface {
     
     @IBOutlet weak var getPassword: UITextField!
     @IBOutlet weak var getEmail: UITextField!
+    @IBOutlet weak var meuBotao: UIButton!
     
     @IBAction func loginAction(_ sender: Any) {
         print("entrou na func loginAction")
         self.presenter?.updateView()
     }
-//    @IBOutlet weak var meuBotao: UIButton!
+    
 
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
          super.init(nibName: "ViewControllerScreen", bundle: Bundle.module)

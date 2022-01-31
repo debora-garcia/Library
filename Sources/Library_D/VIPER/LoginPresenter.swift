@@ -11,11 +11,11 @@ protocol LoginModuleInterface: AnyObject {
   func updateView()
 }
 
-protocol LoginInteractorOutput: AnyObject {
+//protocol LoginInteractorOutput: AnyObject {
+//
+//}
 
-}
-
-class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
+class LoginPresenter: LoginModuleInterface {
 
   weak var view: LoginViewInterface!
 

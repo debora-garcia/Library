@@ -7,8 +7,13 @@
 
 import UIKit
 
-public class ViewControllerScreen: UIViewController {
-    
+protocol LoginViewInterface: AnyObject {
+
+}
+
+public class ViewControllerScreen: UIViewController, LoginViewInterface {
+
+    var presenter: LoginModuleInterface!
     @IBOutlet weak var getPassword: UITextField!
     @IBOutlet weak var getEmail: UITextField!
     @IBOutlet weak var meuBotao: UIButton!
@@ -24,6 +29,7 @@ public class ViewControllerScreen: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         print("Testando a view controller Screen")
+        self.presenter.updateView()
         
 //        meuBotao.setTitle("Fazer login", for: .normal)
     }

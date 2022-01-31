@@ -20,6 +20,10 @@ class LoginPresenter: LoginModuleInterface {
 //  weak var view: LoginViewInterface!
     var interactor: LoginInteractorInput?
 
+    public init() {
+        self.interactor = LoginInteractor()
+    }
+    
   func updateView() {
       self.interactor?.login()
     print("chamou a presenter")

@@ -18,10 +18,10 @@ protocol LoginModuleInterface {
 class LoginPresenter: LoginModuleInterface {
 
 //  weak var view: LoginViewInterface!
-    var interactor: LoginInteractorInput!
+    var interactor: LoginInteractorInput?
 
   func updateView() {
-      self.interactor.login()
+      self.interactor?.login()
     print("chamou a presenter")
   }
 }

@@ -22,8 +22,12 @@ public class ViewControllerScreen: UIViewController, LoginViewInterface {
     @IBAction func loginAction(_ sender: Any) {
         print("entrou na func loginAction")
         
-        if getEmail.state.isEmpty || getPassword.state.isEmpty {
-            var dialogMessage = UIAlertController(title: "Attention", message: "E-mail or password is empty", preferredStyle: .alert)
+        if getEmail.text == "" || getPassword.text == "" {
+            let dialogMessage = UIAlertController(title: "Attention", message: "E-mail or password is empty", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                 print("Ok button tapped")
+              })
+            dialogMessage.addAction(ok)
             self.present(dialogMessage, animated: true, completion: nil)
         } else {
             print(getEmail)

@@ -15,13 +15,23 @@ public class ViewControllerScreen: UIViewController, LoginViewInterface {
     
     var presenter: LoginModuleInterface?
     
-    @IBOutlet weak var getPassword: UITextField!
     @IBOutlet weak var getEmail: UITextField!
+    @IBOutlet weak var getPassword: UITextField!
     @IBOutlet weak var meuBotao: UIButton!
     
     @IBAction func loginAction(_ sender: Any) {
         print("entrou na func loginAction")
-        self.presenter?.updateView()
+        
+        if getEmail.state.isEmpty || getPassword.state.isEmpty {
+            var dialogMessage = UIAlertController(title: "Attention", message: "E-mail or password is empty", preferredStyle: .alert)
+            self.present(dialogMessage, animated: true, completion: nil)
+        } else {
+            print(getEmail)
+            print(getPassword)
+            self.presenter?.updateView()
+        }
+            
+        
     }
     
 

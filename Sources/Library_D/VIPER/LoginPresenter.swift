@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol LoginModuleInterface {
   func updateView()
@@ -24,7 +25,7 @@ class LoginPresenter: LoginModuleInterface {
         self.interactor = LoginInteractor()
     }
     
-  func updateView() {
+    func updateView() {
       self.interactor?.login()
     print("chamou a presenter")
   }

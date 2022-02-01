@@ -14,7 +14,7 @@ protocol LoginInteractorInput {
 class LoginInteractor: LoginInteractorInput {
     
     var output: LoginInteractorOutput?
-    var isLoged: Bool!
+    var isLoged: Bool = true
     
     public init() {
         self.output = LoginPresenter()

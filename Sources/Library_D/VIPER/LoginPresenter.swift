@@ -22,10 +22,11 @@ class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
     var interactor: LoginInteractorInput?
 
     public init() {
-        self.interactor = LoginInteractor()
+
     }
     
     func updateView(email: String, password: String) {
+        self.interactor = LoginInteractor()
         self.interactor?.login(email: email, password: password)    //??????? 
         print("chamou a presenter")
         print("Testando os dados recebidos:")

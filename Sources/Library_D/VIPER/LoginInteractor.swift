@@ -17,10 +17,11 @@ class LoginInteractor: LoginInteractorInput {
     var isLoged: Bool = true
     
     public init() {
-        self.output = LoginPresenter()
+
     }
     
     func login(email: String, password: String) {
+        self.output = LoginPresenter()
         print("Testando se recebi os dados no INTERACTOR")
         print(email)
         print(password)

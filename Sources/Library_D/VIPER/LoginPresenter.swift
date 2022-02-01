@@ -26,8 +26,8 @@ class LoginPresenter: LoginModuleInterface {
     }
     
     func updateView(email: String, password: String) {
-      self.interactor?.login()
-    print("chamou a presenter")
+        self.interactor?.login(email: email, password: password)    //??????? 
+        print("chamou a presenter")
         print("Testando os dados recebidos:")
         print(email)
         print(password)

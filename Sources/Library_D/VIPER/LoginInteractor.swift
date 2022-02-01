@@ -8,11 +8,14 @@
 import Foundation
 
 protocol LoginInteractorInput {
-    func login()
+    func login(email: String, password: String)
 }
 
 class LoginInteractor: LoginInteractorInput {
-    func login() {
-        print("Logou")
+    func login(email: String, password: String) {
+        print("Testando se recebi os dados no INTERACTOR")
+        print(email)
+        print(password)
+        print("Logou?")
     }
 }

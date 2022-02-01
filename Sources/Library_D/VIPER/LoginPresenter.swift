@@ -12,11 +12,11 @@ protocol LoginModuleInterface {
     func updateView(email: String, password: String)
 }
 
-//protocol LoginInteractorOutput: AnyObject {
-//
-//}
+protocol LoginInteractorOutput {
+    func getIfUserIsLoged(isLoged: Bool)
+}
 
-class LoginPresenter: LoginModuleInterface {
+class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
 
 //  weak var view: LoginViewInterface!
     var interactor: LoginInteractorInput?
@@ -32,4 +32,12 @@ class LoginPresenter: LoginModuleInterface {
         print(email)
         print(password)
   }
+    
+    func getIfUserIsLoged(isLoged: Bool) {
+        if isLoged {
+            print("Logado com sucesso!")
+        } else {
+            print("Erro! Tente novamente.")
+        }
+    }
 }

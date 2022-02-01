@@ -30,8 +30,8 @@ public class ViewControllerScreen: UIViewController, LoginViewInterface {
             dialogMessage.addAction(ok)
             self.present(dialogMessage, animated: true, completion: nil)
         } else {
-            print(getEmail)
-            print(getPassword)
+            print(getEmail.text)
+            print(getPassword.text)
             self.presenter?.updateView()
         }
             

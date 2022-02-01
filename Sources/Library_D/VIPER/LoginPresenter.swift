@@ -19,7 +19,7 @@ protocol LoginInteractorOutput {
 class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
 
 //  weak var view: LoginViewInterface!
-    weak var interactor: LoginInteractorInput?
+    var interactor: LoginInteractorInput?
 
     public init() {
         self.interactor = LoginInteractor()

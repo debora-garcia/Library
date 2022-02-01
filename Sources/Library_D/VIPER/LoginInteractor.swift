@@ -13,11 +13,11 @@ protocol LoginInteractorInput {
 
 class LoginInteractor: LoginInteractorInput {
     
-    var output: LoginInteractorOutput?
-    var isLoged: Bool = true
+    weak var output: LoginInteractorOutput?
+    weak var isLoged: Bool = true
     
     public init() {
-        self.output = LoginPresenter()
+        //self.output = LoginPresenter()
     }
     
     func login(email: String, password: String) {

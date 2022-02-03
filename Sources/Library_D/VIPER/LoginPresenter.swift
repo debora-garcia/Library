@@ -13,7 +13,7 @@ protocol LoginModuleInterface {
 }
 
 public protocol LoginInteractorOutput {
-    func getIfUserIsLoged(isLoged: Bool)
+    func getIfUserIsLoged(isLoged: Bool) -> Bool
 }
 
 public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
@@ -34,12 +34,13 @@ public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
         print(password)
   }
     
-    public func getIfUserIsLoged(isLoged: Bool) {
-        if isLoged {viewDidLoad
+    public func getIfUserIsLoged(isLoged: Bool) -> Bool {
+        if isLoged {
             print("Logado com sucesso!")
+            return true
         } else {
             print("Erro! Tente novamente.")
+            return false
         }
-        return isLoged
     }
 }

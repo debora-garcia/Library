@@ -12,11 +12,11 @@ protocol LoginModuleInterface {
     func updateView(email: String, password: String)
 }
 
-protocol LoginInteractorOutput {
+public protocol LoginInteractorOutput {
     func getIfUserIsLoged(isLoged: Bool)
 }
 
-class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
+public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
 
 //  weak var view: LoginViewInterface!
     var interactor: LoginInteractorInput?

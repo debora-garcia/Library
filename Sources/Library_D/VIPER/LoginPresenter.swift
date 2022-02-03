@@ -34,7 +34,7 @@ public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
         print(password)
   }
     
-    func getIfUserIsLoged(isLoged: Bool) {
+    public func getIfUserIsLoged(isLoged: Bool) {
         if isLoged {
             print("Logado com sucesso!")
         } else {

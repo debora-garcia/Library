@@ -35,10 +35,11 @@ public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
   }
     
     public func getIfUserIsLoged(isLoged: Bool) {
-        if isLoged {
+        if isLoged {viewDidLoad
             print("Logado com sucesso!")
         } else {
             print("Erro! Tente novamente.")
         }
+        return isLoged
     }
 }

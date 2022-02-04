@@ -16,9 +16,13 @@ public protocol LoginInteractorOutput {
     func getIfUserIsLoged(isLoged: Bool) -> Bool
 }
 
-public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
+// New protocol for router
+public protocol LoginRouterOutput {
+    func returnToAplication() 
+}
 
-//  weak var view: LoginViewInterface!
+public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput, LoginRouterOutput {
+
     var interactor: LoginInteractorInput?
 
     public init() {
@@ -27,7 +31,7 @@ public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
     
     func updateView(email: String, password: String) {
         self.interactor = LoginInteractor()
-        self.interactor?.login(email: email, password: password)    //??????? 
+        self.interactor?.login(email: email, password: password)
         print("chamou a presenter")
         print("Testando os dados recebidos:")
         print(email)
@@ -42,5 +46,10 @@ public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
             print("Erro! Tente novamente.")
             return false
         }
+    }
+    
+    public func returnToAplication() {
+        print("Testando a router dentro da presenter")
+        self.present(ViewControllerScreen(), animated: true, completion: nil)
     }
 }

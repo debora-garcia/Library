@@ -10,20 +10,19 @@ import UIKit
 
 protocol LoginModuleInterface {
     func updateView(email: String, password: String)
+//    func showResponseInScreen()    // function for Router
 }
 
 public protocol LoginInteractorOutput {
-    func getIfUserIsLoged(isLoged: Bool) -> Bool
+//    func getIfUserIsLoged(isLoged: Bool) -> Bool
+    func getIfUserIsLoged(isLoged: Bool)
+
 }
 
-// New protocol for router
-public protocol LoginRouterOutput {
-    func returnToAplication() 
-}
-
-public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput, LoginRouterOutput {
+public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
 
     var interactor: LoginInteractorInput?
+    var router: LoginRouter?    // variable for class router
 
     public init() {
 
@@ -38,18 +37,19 @@ public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput, LoginR
         print(password)
   }
     
-    public func getIfUserIsLoged(isLoged: Bool) -> Bool {
+    public func getIfUserIsLoged(isLoged: Bool) {
         if isLoged {
             print("Logado com sucesso!")
-            return true
+//            return true
         } else {
             print("Erro! Tente novamente.")
-            return false
+//            return false
         }
+        self.router?.backToScreen(isLoged: isLoged)
     }
     
-    public func returnToAplication() {
-        print("Testando a router dentro da presenter")
-        self.present(ViewControllerScreen(), animated: true, completion: nil)
-    }
+//    public func showResponseInScreen() {
+//
+//    }
+    
 }

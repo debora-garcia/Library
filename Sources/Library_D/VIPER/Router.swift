@@ -8,21 +8,21 @@
 import Foundation
 
 protocol LoginRouterOutputScreen {
-    func backToScreen()
+    func backToScreen(isLoged: Bool)
 }
 
 class LoginRouter: LoginRouterOutputScreen {
     
-    var routerScreens: LoginRouterOutput?
+    var routerScreens: LoginInteractorOutput?
     
     public init() {
         
     }
     
 //    when I connect the app with the lib, the lib will found the ViewController???
-    func backToScreen() {
+    func backToScreen(isLoged: Bool) {
         print("TESTANDO A ROUTER!")
-        self.routerScreens = LoginPresenter()
-        self.present(ViewController(), animated: true, completion: nil)
+//        self.routerScreens = LoginPresenter()
+//        self.present(ViewController(), animated: true, completion: nil)
     }
 }

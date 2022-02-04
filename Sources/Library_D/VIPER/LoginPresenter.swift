@@ -10,49 +10,44 @@ import UIKit
 
 protocol LoginModuleInterface {
     func updateView(email: String, password: String)
-//    func showResponseInScreen()    // function for Router
 }
 
 public protocol LoginInteractorOutput {
-//    func getIfUserIsLoged(isLoged: Bool) -> Bool
-    func getIfUserIsLoged(isLoged: Bool)
+    func getIfUserIsLoged(isLoged: Bool) -> Bool
 
 }
 
 public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
 
     var interactor: LoginInteractorInput?
-    var router: LoginRouterOutputScreen?    // variable for class router
+    var view: LoginViewInterface?
 
     public init() {
 
     }
     
     func updateView(email: String, password: String) {
+        
         self.interactor = LoginInteractor()
         self.interactor?.login(email: email, password: password)
+        
         print("chamou a presenter")
         print("Testando os dados recebidos:")
         print(email)
         print(password)
   }
     
-    public func getIfUserIsLoged(isLoged: Bool) {
-        self.router = LoginRouter()
+    public func getIfUserIsLoged(isLoged: Bool) -> Bool {
+        
+        self.view = ViewControllerScreen()
+        self.view?.returnResponseForApp(isLoged: isLoged)
+        
         if isLoged {
             print("Logado com sucesso!")
-//            return true
-            self.router?.backToScreen(isLoged: true)
+            return true
         } else {
             print("Erro! Tente novamente.")
-            self.router?.backToScreen(isLoged: false)
-//            return false
+            return false
         }
-        
     }
-    
-//    public func showResponseInScreen() {
-//
-//    }
-    
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginViewInterface: AnyObject {
-
+    func returnResponseForApp(isLoged: Bool)
 }
 
 public class ViewControllerScreen: UIViewController, LoginViewInterface {
@@ -32,10 +32,7 @@ public class ViewControllerScreen: UIViewController, LoginViewInterface {
         } else {
             self.presenter?.updateView(email: getEmail.text!, password: getPassword.text!)
         }
-            
-        
     }
-    
 
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
          super.init(nibName: "ViewControllerScreen", bundle: Bundle.module)
@@ -49,8 +46,11 @@ public class ViewControllerScreen: UIViewController, LoginViewInterface {
         super.viewDidLoad()
         print("Testando a view controller Screen")
         self.presenter = LoginPresenter()
-//        self.presenter?.updateView()
-        
-//        meuBotao.setTitle("Fazer login", for: .normal)
+//        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func returnResponseForApp(isLoged: Bool) {
+        print("***** test return presenter -> view *****")
+        print(isLoged)
     }
 }

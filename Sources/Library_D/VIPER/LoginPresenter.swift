@@ -22,7 +22,7 @@ public protocol LoginInteractorOutput {
 public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
 
     var interactor: LoginInteractorInput?
-    var router: LoginRouter?    // variable for class router
+    var router: LoginRouterOutputScreen?    // variable for class router
 
     public init() {
 
@@ -38,14 +38,17 @@ public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
   }
     
     public func getIfUserIsLoged(isLoged: Bool) {
+        self.router = LoginRouter()
         if isLoged {
             print("Logado com sucesso!")
 //            return true
+            self.router?.backToScreen(isLoged: true)
         } else {
             print("Erro! Tente novamente.")
+            self.router?.backToScreen(isLoged: false)
 //            return false
         }
-        self.router?.backToScreen(isLoged: isLoged)
+        
     }
     
 //    public func showResponseInScreen() {

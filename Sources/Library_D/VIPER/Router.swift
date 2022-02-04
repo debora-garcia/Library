@@ -22,6 +22,7 @@ class LoginRouter: LoginRouterOutputScreen {
 //    when I connect the app with the lib, the lib will found the ViewController???
     func backToScreen(isLoged: Bool) {
         print("TESTANDO A ROUTER!")
+        print(isLoged)
 //        self.routerScreens = LoginPresenter()
 //        self.present(ViewController(), animated: true, completion: nil)
     }

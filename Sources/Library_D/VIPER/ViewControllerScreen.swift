@@ -49,7 +49,7 @@ public class ViewControllerScreen: UIViewController, LoginViewInterface {
 //        self.dismiss(animated: true, completion: nil)
     }
     
-    func returnResponseForApp(isLoged: Bool, email: String) -> String {
+    public func returnResponseForApp(isLoged: Bool, email: String) -> String {
         print("***** test return presenter -> view *****")
         print(isLoged)
         print(email)

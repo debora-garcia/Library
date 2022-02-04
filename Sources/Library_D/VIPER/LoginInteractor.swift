@@ -31,6 +31,6 @@ class LoginInteractor: LoginInteractorInput {
         } else {
             isLoged = false
         }
-        self.output?.getIfUserIsLoged(isLoged: isLoged)
+        self.output?.getIfUserIsLoged(isLoged: isLoged, email: email)
     }
 }

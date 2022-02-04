@@ -13,7 +13,7 @@ protocol LoginModuleInterface {
 }
 
 public protocol LoginInteractorOutput {
-    func getIfUserIsLoged(isLoged: Bool) -> Bool
+    func getIfUserIsLoged(isLoged: Bool, email: String) -> Bool
 
 }
 
@@ -37,10 +37,10 @@ public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
         print(password)
   }
     
-    public func getIfUserIsLoged(isLoged: Bool) -> Bool {
+    public func getIfUserIsLoged(isLoged: Bool, email: String) -> Bool {
         
         self.view = ViewControllerScreen()
-        self.view?.returnResponseForApp(isLoged: isLoged)
+        self.view?.returnResponseForApp(isLoged: isLoged, email: email)
         
         if isLoged {
             print("Logado com sucesso!")

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginViewInterface: AnyObject {
-    func returnResponseForApp(isLoged: Bool)
+    func returnResponseForApp(isLoged: Bool, email: String) -> String
 }
 
 public class ViewControllerScreen: UIViewController, LoginViewInterface {
@@ -49,8 +49,14 @@ public class ViewControllerScreen: UIViewController, LoginViewInterface {
 //        self.dismiss(animated: true, completion: nil)
     }
     
-    func returnResponseForApp(isLoged: Bool) {
+    func returnResponseForApp(isLoged: Bool, email: String) -> String {
         print("***** test return presenter -> view *****")
         print(isLoged)
+        print(email)
+        if isLoged {
+            return "\(email), sucesso!"
+        } else {
+            return "Erro!"
+        }
     }
 }

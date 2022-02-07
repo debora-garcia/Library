@@ -7,21 +7,21 @@
 
 import Foundation
 
-protocol LoginInteractorInput {
+protocol LoginInteractorInput: AnyObject {
     func login(email: String, password: String)
 }
 
 class LoginInteractor: LoginInteractorInput {
     
-    var output: LoginInteractorOutput?
+    weak var output: LoginInteractorOutput?
     var isLoged: Bool = true
     
-    public init() {
-
+    public init(output: LoginInteractorOutput?) {
+        self.output = output
     }
     
     func login(email: String, password: String) {
-        self.output = LoginPresenter()
+//        self.output = LoginPresenter()
         print("Testando se recebi os dados no INTERACTOR")
         print(email)
         print(password)
@@ -31,6 +31,6 @@ class LoginInteractor: LoginInteractorInput {
         } else {
             isLoged = false
         }
-        self.output?.getIfUserIsLoged(isLoged: isLoged, email: email)
+        self.output?.userDidLoad(isLoged: isLoged, email: email)
     }
 }

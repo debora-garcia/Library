@@ -12,23 +12,24 @@ protocol LoginModuleInterface {
     func updateView(email: String, password: String)
 }
 
-public protocol LoginInteractorOutput {
-    func getIfUserIsLoged(isLoged: Bool, email: String) -> Bool
+public protocol LoginInteractorOutput: AnyObject {
+    func userDidLoad(isLoged: Bool, email: String) -> Bool
 
 }
 
 public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
 
     var interactor: LoginInteractorInput?
-    var view: LoginViewInterface?
+    weak var view: LoginViewInterface?
 
-    public init() {
-
+    public init(view: LoginViewInterface) {
+        self.interactor = LoginInteractor(output: self)
+        self.view = view
     }
     
     func updateView(email: String, password: String) {
         
-        self.interactor = LoginInteractor()
+//        self.interactor = LoginInteractor()
         self.interactor?.login(email: email, password: password)
         
         print("chamou a presenter")
@@ -37,9 +38,8 @@ public class LoginPresenter: LoginModuleInterface, LoginInteractorOutput {
         print(password)
   }
     
-    public func getIfUserIsLoged(isLoged: Bool, email: String) -> Bool {
+    public func userDidLoad(isLoged: Bool, email: String) -> Bool {
         
-        self.view = ViewControllerScreen()
         self.view?.returnResponseForApp(isLoged: isLoged, email: email)
         
         if isLoged {

@@ -7,13 +7,14 @@
 
 import UIKit
 
-protocol LoginViewInterface: AnyObject {
-    func returnResponseForApp(isLoged: Bool, email: String) -> String
+public protocol LoginViewInterface: AnyObject {
+    func returnResponseForApp(isLoged: Bool, email: String)
 }
 
 public class ViewControllerScreen: UIViewController, LoginViewInterface {
     
     var presenter: LoginModuleInterface?
+    public weak var delegate: ViewControllerScreenDelegate?
     
     @IBOutlet weak var getEmail: UITextField!
     @IBOutlet weak var getPassword: UITextField!
@@ -45,18 +46,19 @@ public class ViewControllerScreen: UIViewController, LoginViewInterface {
     public override func viewDidLoad() {
         super.viewDidLoad()
         print("Testando a view controller Screen")
-        self.presenter = LoginPresenter()
+        self.presenter = LoginPresenter(view: self)
 //        self.dismiss(animated: true, completion: nil)
     }
     
-    public func returnResponseForApp(isLoged: Bool, email: String) -> String {
-        print("***** test return presenter -> view *****")
-        print(isLoged)
-        print(email)
-        if isLoged {
-            return "\(email), sucesso!"
-        } else {
-            return "Erro!"
-        }
+    public func returnResponseForApp(isLoged: Bool, email: String) {
+        delegate?.loginDidFinish(isLogged: isLoged, email: email)
+        self.dismiss(animated: true, completion: nil)
     }
+
 }
+
+
+public protocol ViewControllerScreenDelegate: AnyObject {
+    func loginDidFinish(isLogged: Bool, email: String)
+}
+
